@@ -2,16 +2,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
+      "name": "Depurar Proyecto C++",
       "type": "cppdbg",
       "request": "launch",
+      "program": "${workspaceFolder}/outDebug.exe",
       "args": [],
       "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
       "externalConsole": true,
-      "cwd": "e:/Importantes/UCA/project-error-al-compilar/src",
-      "program": "e:/Importantes/UCA/project-error-al-compilar/src/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "E:/bin/gdb.exe",
+      "preLaunchTask": "compilar-proyecto",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
