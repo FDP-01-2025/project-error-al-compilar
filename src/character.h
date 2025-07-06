@@ -22,8 +22,8 @@ struct Character {
 };
 
 // Función para crear los personajes
-Character createNAruto(); 
-Character createMAdara(); 
+Character createNaruto(); 
+Character createMadara(); 
 Character createSasuke();
 Character createNeji(); 
 Character createRocklee(); 

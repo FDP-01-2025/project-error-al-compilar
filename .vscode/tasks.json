@@ -9,6 +9,9 @@
         "-g",
         "main.cpp",
         "src/menu.cpp",
+        "src/character.cpp",
+        "src/battle.cpp",
+        "src/player_selection.cpp", 
         "-o",
         "outDebug.exe"
       ],

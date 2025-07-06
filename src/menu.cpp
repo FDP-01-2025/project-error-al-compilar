@@ -1,13 +1,18 @@
-#include <iostream> 
-#include "menu.h" 
+#include "menu.h"
+#include "character.h"
+#include "player_selection.h"
+#include "battle.h"
 
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 void ShowMainMenu() {
     int choice; 
 
     do {
-        cout << "\n--- Welcome to Naruto Shippuden: Final Battle ---\n"; 
+        cout << "\n🌟 Welcome to Naruto Shippuden Console Game 🌟\n"; 
         cout << "1 - Fight the Final Boss\n";
         cout << "2 - Fight a Random Opponent\n";
         cout << "3 - Exit the Game\n";
@@ -15,33 +20,46 @@ void ShowMainMenu() {
         cin >> choice;
 
         switch (choice) {
-            case 1: 
-            cout << "You chose to fight the Final Boss!\n"; 
+            case 1: {
+            Character player = chooseCharacter();
+            Character boss = createMadara();
+            cout << "\n🔥 Welcome to the final battle! Time to face MADARA!\n";
+            startBattle(player, boss);
             // llamar la funcion de batalla contra el jefe final 
             break; 
+            }
 
-            case 2:
-                cout << "You chose to fight a random opponent!\n";
-                // Llamar la función de batalla contra un oponente aleatorio
-                break;
-            case 3:
-                cout << "Game closed successfully. See you next time!\n";
-                break;
-            default:
-                cout << "Invalid choice. Please select a valid option.\n";
-                break;
+            case 2:{
+            cout << "You chose to fight a random opponent!\n";
+            Character player = chooseCharacter();
+            // Lista de personajes jugables para elegir enemigo aleatorio
+            Character enemies[5] = {
+            createNaruto(),
+            createSasuke(),
+            createNeji(),
+            createRocklee(),
+            createGaara()
+            };
+             // Elegir un oponente al azar (distinto del jugador)
+                Character randomEnemy;
+                do {
+                    randomEnemy = enemies[rand() % 5];
+                } while (randomEnemy.name == player.name);
+
+                cout << "\n👊 You will fight against: " << randomEnemy.name << "!\n";
+                startBattle(player, randomEnemy);
+            break;
+            }
+
+            case 3:{
+             cout << "\n👋 Thanks for playing! Game closed successfully.\n";
+            break;
+            }
+            default:{
+            cout << "\n❌ Invalid choice. Please select a valid option.\n";
+            break;
+            }
         }
 
     } while (choice != 3);
 }
-
-
-
-
-
-
-
-    
-
-    
-   
