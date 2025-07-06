@@ -24,7 +24,7 @@ void ShowMainMenu() {
             case 1: {
             Character player = chooseCharacter();
             Character boss = createMadara();
-            cout << "\n🔥 Welcome to the final battle! Time to face MADARA!\n";
+            cout << "\n Welcome to the final battle! Time to face MADARA!\n";
             startBattle(player, boss);
             // llamar la funcion de batalla contra el jefe final 
             break; 
@@ -47,13 +47,13 @@ void ShowMainMenu() {
                     randomEnemy = enemies[rand() % 5];
                 } while (randomEnemy.name == player.name);
 
-                cout << "\n👊 You will fight against: " << randomEnemy.name << "!\n";
+                cout << "\n You will fight against: " << randomEnemy.name << "!\n";
                 startBattle(player, randomEnemy);
             break;
             }
 
             case 3:{
-             cout << "\n👋 Thanks for playing! Game closed successfully.\n";
+             cout << "\n Thanks for playing! Game closed successfully.\n";
             break;
             }
 
@@ -63,7 +63,7 @@ void ShowMainMenu() {
             break; 
             }
             default:{
-            cout << "\n❌ Invalid choice. Please select a valid option.\n";
+            cout << "\n Invalid choice. Please select a valid option.\n";
             break;
             }
         }
