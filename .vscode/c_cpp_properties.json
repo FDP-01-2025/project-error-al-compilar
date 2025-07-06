@@ -8,7 +8,7 @@
             ],
             "compilerPath": "E:/bin/gcc.exe",
             "cStandard": "${default}",
-            "cppStandard": "${default}",
+            "cppStandard": "c++11",
             "intelliSenseMode": "windows-gcc-x86",
             "compilerArgs": [
                 ""

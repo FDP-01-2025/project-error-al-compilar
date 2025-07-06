@@ -2,7 +2,7 @@
 #include "character.h"
 #include "player_selection.h"
 #include "battle.h"
-
+#include "logger.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -12,10 +12,11 @@ void ShowMainMenu() {
     int choice; 
 
     do {
-        cout << "\n🌟 Welcome to Naruto Shippuden Console Game 🌟\n"; 
-        cout << "1 - Fight the Final Boss\n";
+        cout << "\n Welcome to Naruto Shippuden Console Game \n"; 
+        cout << "1 - Fight MADARA the Final Boss\n";
         cout << "2 - Fight a Random Opponent\n";
         cout << "3 - Exit the Game\n";
+        cout << "4 - View Battle History\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -54,6 +55,12 @@ void ShowMainMenu() {
             case 3:{
              cout << "\n👋 Thanks for playing! Game closed successfully.\n";
             break;
+            }
+
+            case 4: {
+            cout << "\n Battle History:\n";
+            showBattleLog();
+            break; 
             }
             default:{
             cout << "\n❌ Invalid choice. Please select a valid option.\n";

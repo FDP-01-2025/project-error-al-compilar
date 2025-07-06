@@ -1,4 +1,7 @@
 #include "battle.h"
+#include "logger.h"
+#include <thread>
+#include <chrono>
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -17,7 +20,7 @@ cout << i + 1 << "." << character.abilities[i].name
 
 void startBattle(Character player, Character enemy) {
 srand(time(0)); // Inicializa la semilla aleatoria
-cout << "⚔️ Battle begins: " << player.name << " vs " << enemy.name << "!" << endl;
+cout << " Battle begins: " << player.name << " vs " << enemy.name << "!" << endl;
 
 while (player.health > 0 && enemy.health > 0) {
         // Turno del jugador
@@ -32,6 +35,7 @@ while (player.health > 0 && enemy.health > 0) {
     
         Ability chosen = player.abilities[choice - 1];
         float roll = static_cast<float>(rand()) / RAND_MAX;
+
         if (roll <= chosen.hitChance) {
             if (chosen.damage >= 0) {
                 enemy.health -= chosen.damage;
@@ -70,11 +74,17 @@ while (player.health > 0 && enemy.health > 0) {
         // Mostrar salud actual
         cout << "\nCurrent HP - " << player.name << ": " << player.health
              << " | " << enemy.name << ": " << enemy.health << endl;
+
     }
 
-    // Resultado
-    if (player.health > 0)
-        cout << "\n🎉 You won the battle!" << endl;
-    else
-        cout << "\n💀 You were defeated..." << endl;
+    // Resultado - funcion de logger
+    cout << "\n========== Battle Result ==========" << endl;
+    if (player.health > 0) {
+        cout << "You won the battle! Remaining HP: " << player.health << endl;
+        logBattleResult(player.name, enemy.name, true);
+    } else {
+        cout << "You were defeated... " << enemy.name << " had " << enemy.health << " HP left." << endl;
+        logBattleResult(player.name, enemy .name, false);
+    }
+
 }

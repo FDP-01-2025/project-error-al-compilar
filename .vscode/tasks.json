@@ -6,12 +6,14 @@
       "type": "shell",
       "command": "g++",
       "args": [
+        "-std=c++11",
         "-g",
         "main.cpp",
         "src/menu.cpp",
         "src/character.cpp",
         "src/battle.cpp",
         "src/player_selection.cpp", 
+        "src/logger.cpp", 
         "-o",
         "outDebug.exe"
       ],
