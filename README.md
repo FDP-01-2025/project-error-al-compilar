@@ -14,8 +14,8 @@ El proyecto es un juego de lucha por turnos basado en el anime mundialmente cono
 1. **Nombre completo:** Ricardo Rafael Albayeros Valle
    **Carnet:** 00245925
 
-2. **Nombre completo:** [Nombre del estudiante 2]  
-   **Carnet:** [Carnet del estudiante 2]
+2. **Nombre completo:** Diego Moises Argueta Aguirre
+   **Carnet:** 00046525
 
 
 
