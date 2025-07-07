@@ -3,13 +3,13 @@
 // Naruto character 
 Character createNaruto() { 
 Character naruto; 
-    naruto.name = "Naruto"; 
-    naruto.health = MAX_HEALTH; 
-    naruto.abilities[0] = {"Rasengan", 25, 0.8f};
-    naruto.abilities[1] = {"Shadow clone Attack", 20, 1.0f};
-    naruto.abilities[2] = {"Rasen Shuriken", 60, 0.5f};
-    naruto.abilities[3] = {"Hinata's kiss", -30, 1.0f}; // Cura
-    return naruto;
+naruto.name = "Naruto"; 
+naruto.health = MAX_HEALTH; 
+naruto.abilities[0] = {"Rasengan", 25, 0.8f};
+naruto.abilities[1] = {"Shadow clone Attack", 20, 1.0f};
+naruto.abilities[2] = {"Rasen Shuriken", 60, 0.5f};
+naruto.abilities[3] = {"Hinata's kiss", -30, 1.0f}; // Cura
+return naruto;
 }
 
 // Madara Character (Jefe) 
@@ -52,12 +52,12 @@ return neji;
 Character createRocklee(){ 
 Character lee; 
 lee.name = "Rock Lee"; 
- lee.health = MAX_HEALTH;
-    lee.abilities[0] = {"Leaf Hurricane", 20, 0.9f};
-    lee.abilities[1] = {"Eight Gates Formation", 55, 0.6f};
-    lee.abilities[2] = {"Drunken Fist", 25, 0.8f};
-    lee.abilities[3] = {"Recovery Push-ups", -30, 1.0f};  // Cura
-    return lee;
+lee.health = MAX_HEALTH;
+lee.abilities[0] = {"Leaf Hurricane", 20, 0.9f};
+lee.abilities[1] = {"Eight Gates Formation", 55, 0.6f};
+lee.abilities[2] = {"Drunken Fist", 25, 0.8f};
+lee.abilities[3] = {"Recovery Push-ups", -30, 1.0f};  // Cura
+return lee;
 }
 
 // Gaara Character 

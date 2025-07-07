@@ -9,16 +9,16 @@ const int MAX_HEALTH = 100;
 
 //Structura de las habilidades 
 struct Ability {
-    std::string name;
-    int damage;
-    float hitChance; // valor entre 0.0 (0%) y 1.0 (100%)
+std::string name;
+int damage;
+float hitChance; // valor entre 0.0 (0%) y 1.0 (100%)
 };
 
 // Estructura de los personajes 
 struct Character {
-    std::string name;
-    int health; 
-    Ability abilities[MAX_ABILITIES]; // habilidades del personaje
+std::string name;
+int health; 
+Ability abilities[MAX_ABILITIES]; // habilidades del personaje
 };
 
 // Función para crear los personajes

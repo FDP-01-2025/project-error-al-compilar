@@ -18,29 +18,29 @@ time_t now = time(0);
 tm* timeinfo = localtime(&now); 
 
 logFile << "--------------------------------------\n";
-    logFile << " Date: " << asctime(timeinfo);
-    logFile << " Player: " << playerName << "\n";
-    logFile << " Enemy: " << enemyName << "\n";
-    logFile << " Result: " << (playerWon ? "Victory" : "Defeat") << "\n";
-    logFile << "--------------------------------------\n\n";
+logFile << " Date: " << asctime(timeinfo);
+logFile << " Player: " << playerName << "\n";
+logFile << " Enemy: " << enemyName << "\n";
+logFile << " Result: " << (playerWon ? "Victory" : "Defeat") << "\n";
+logFile << "--------------------------------------\n\n";
 
-    logFile.close();
+logFile.close();
 }
 
-    void showBattleLog() {
-    ifstream logFile("battle_log.txt");
+void showBattleLog() {
+ifstream logFile("battle_log.txt");
 
-    if (!logFile){
-        cerr << "Could not open log file because no battles have been played yet!" << endl;
-        return; 
-    }
+if (!logFile){
+cerr << "Could not open log file because no battles have been played yet!" << endl;
+return; 
+}
 
-    cout << "========== Battle History =========="; 
-    string line; 
-    while (getline(logFile, line)) { 
-        cout << line << endl; 
+cout << "========== Battle History =========="; 
+string line; 
+while (getline(logFile, line)) { 
+cout << line << endl; 
 
-    }
+}
 
-    logFile.close(); 
+logFile.close(); 
 }
